@@ -183,7 +183,7 @@ margin: 0;
 <script src="js/lib.js"></script>
 <script src="js/parallax.js"></script>
 <script>
-$(window).on("load", function (e) {
+jQuery(window).load(function () {
   var img = $("#goggles"),
       layers = $(".layer"),
       title = $("#title"),
@@ -226,7 +226,7 @@ $(window).on("load", function (e) {
     // return staggerTimeline;
   // }
   var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene, {limitX: 20, limitY: 15, frictionX: 0.1, frictionY: 0.1});
+  var parallax = new Parallax(scene, {limitX: 20, limitY: 15});
     // relativeInput: true,
     // clipRelativeInput: false,
     // hoverOnly: true,

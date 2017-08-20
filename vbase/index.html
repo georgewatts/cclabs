@@ -102,6 +102,70 @@ margin: 0;
     min-height: 360px;
   }
 }
+
+.anchor-bottom{
+    width:100%;
+    position: absolute;
+    bottom:10px;
+    /* for text*/
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+    -moz-text-shadow: 0 0 2px #000;
+    -webkit-text-shadow: 0 0 2px #000;
+} .anchor-bottom-img{
+    width: 25%;
+    position: relative;
+    display: block;
+    /*float: left;*/
+    margin-left: auto;
+    margin-right: auto;
+} .anchor-bottom > h1 {
+  margin: 10px;
+}
+.myButton {
+  -moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
+  -webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
+  box-shadow:inset 0px -3px 7px 0px #29bbff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #50C2EA), color-stop(1, #317b95));
+  background:-moz-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:-webkit-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:-o-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:-ms-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:linear-gradient(to bottom, #50C2EA 5%, #317b95 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#50C2EA', endColorstr='#317b95',GradientType=0);
+  background-color:#50C2EA;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #0b0e07;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  padding:9px 23px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+  background -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #50C2EA), color-stop(1, #317b95));
+  background:-moz-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:-webkit-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:-o-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:-ms-linear-gradient(top, #50C2EA 5%, #317b95 100%);
+  background:linear-gradient(to bottom, #50C2EA 5%, #317b95 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#50C2EA', endColorstr='#317b95',GradientType=0);
+  background-color:#50C2EA;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
 </style>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -109,12 +173,22 @@ margin: 0;
   <img id="goggles" src="vr_goggles.png" />
   <div class="container">
     <div id="scene">
-      <div class="layer" data-depth="0.00"><img id="stars" src="stars.png"></div>
+      <!-- <div class="layer" data-depth="0.00"><img src="stars.png"></div>
       <div class="layer" data-depth="0.10"><img src="moon.png"></div>
       <div class="layer" data-depth="0.15"><img src="ridge_back.png"></div>
       <div class="layer" data-depth="0.20"><img id="ridge_front" src="ridge_front.png"></div>
-      <div class="layer" data-depth="0.30"><img src="couple.png"></div>
-      <!-- <div data-depth="1.00"><img src="layer6.png"></div> -->
+      <div class="layer" data-depth="0.30"><img src="couple.png"></div> -->
+      <div class="layer" data-depth="0.1"><img src="img/1.png" /></div>
+      <div class="layer" data-depth="0.15"><img src="img/2.png" /></div>
+      <div class="layer" data-depth="0.2"><img src="img/3.png" /></div>
+      <div class="layer" data-depth="0.25"><img src="img/4.png" /></div>
+      <div class="layer" data-depth="0.4"><img src="img/5.png" /></div>
+      <div class="layer" data-depth="0.5"><img src="img/6.png" /></div>
+      <div class="layer" data-depth="0.6"><img src="img/7.png" /></div>
+      <div class="layer" data-depth="0.1"><img src="img/8.png" /></div>
+      <div class="layer" data-depth="0.1"><img src="img/9.png" /></div>
+      <div class="layer" data-depth="0.15"><img src="img/10.png" /></div>
+      <div class="layer" data-depth="0.2"><img src="img/12.png" /></div>
     </div>
   </div>
   <!-- <ul id="scene" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15" style="width: 693px; height: 309px; transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; -webkit-backface-visibility: hidden;">
@@ -171,8 +245,15 @@ margin: 0;
       <li class="layer" data-depth="0.80" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(85.00000000122826px, -42.86016464396106px, 0px); transform-style: preserve-3d; -webkit-backface-visibility: hidden;"><div class="wave plain depth-80"></div></li>
       <li class="layer" data-depth="1.00" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(106.25000000153531px, -53.575205804951324px, 0px); transform-style: preserve-3d; -webkit-backface-visibility: hidden;"><div class="wave paint depth-100"></div></li>
     </ul>-->
-  <div id="title" class="intro">
+    <div id="title" class="title intro">
+    </div>
+  <div class="title anchor-bottom">
+    <img class="anchor-bottom-img" src="img/vbase.png" />
     <h1>Welcome to a new reality</h1>
+    <!-- <h1>THIS WILL BE A BUTTON</h1> -->
+    <!-- <div id="myButton"> -->
+      <a id="myButton" class="myButton">Sign Up to our Newsletter</a>
+    <!-- </div> -->
   </div>
 </body>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
@@ -182,19 +263,22 @@ margin: 0;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/parallax.js"></script>
+<script src="js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
 <script>
 jQuery(window).load(function () {
-  var img = $("#goggles"),
+  var goggles = $("#goggles"),
       layers = $(".layer"),
-      title = $("#title"),
+      title = $(".title"),
       $scene = $('#scene');
       // tl = new TimelineLite();
 
   // function getStaggerAnimation() {
     // var staggerTimeline = new TimelineLite();
-    // TweenLite.to(img, 2.5, {top:-6000, left:"500px", ease:Back.easeOut});
+    // TweenLite.to(goggles, 2.5, {top:-6000, left:"500px", ease:Back.easeOut});
 
-      // TweenLite.from(img, 3, {top:"-50%", ease:Back.easeOut});
+      // TweenLite.from(goggles, 3, {top:"-50%", ease:Back.easeOut});
       // Resize handler.
       (resize = function() {
         $scene[0].style.width = window.innerWidth + 'px';
@@ -212,12 +296,16 @@ jQuery(window).load(function () {
       window.onresize = _.debounce(resize, 200);
       window.onscroll = _.debounce(resize, 200);
 
-  var tl = new TimelineLite();
+  var tl = new TimelineLite({onComplete: function(){
+        console.log('on complete resolving');
+        var elem = document.getElementById('goggles');
+        elem.parentNode.removeChild(elem);
+      }});
 
-  tl.from(img, 2, {top:"-50%", ease:Back.easeOut})
-    .to(img, 5, {width:"1000%", alpha:0}, 3.0)
+  tl.from(goggles, 2, {top:"-50%", ease:Back.easeOut})
+    .to(goggles, 5, {width:"1000%", alpha:0}, 3.0)
     .from(layers, 3.0, {alpha:0}, 4.0)
-    .from(title, 3.0, {alpha:0}, 4.0);
+    .from(title, 3.0, {alpha:0}, 4.0, );
   // .to(img, 0.1, {width:"0%"});
   // .staggerFrom(img, 0.5, {top:"-=30px", rotation:"-40deg", alpha:0, scale:1.8, ease:Back.easeOut}, 0.2);
 
@@ -227,6 +315,16 @@ jQuery(window).load(function () {
   // }
   var scene = document.getElementById('scene');
   var parallax = new Parallax(scene, {limitX: 20, limitY: 15, frictionX: 0.1, frictionY: 0.1});
+
+  $("myButton").on("click", function(e){
+    // e.stop();
+    var SM = new SimpleModal({"btn_ok":"Alert button"});
+        SM.show({
+          "title":"Alert Modal Title",
+          "contents":"Lorem ipsum dolor sit amet..."
+        });
+  })
+
     // relativeInput: true,
 
   //var scene = document.getElementById('scene');
@@ -258,5 +356,7 @@ jQuery(window).load(function () {
 
   // parallax.enable();
 });
+// window.addEvent("domready", function(e){
+
 </script>
 </html>

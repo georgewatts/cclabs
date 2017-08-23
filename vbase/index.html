@@ -281,8 +281,10 @@ jQuery(window).load(function () {
       // TweenLite.from(goggles, 3, {top:"-50%", ease:Back.easeOut});
       // Resize handler.
       (resize = function() {
-        $scene[0].style.width = window.innerWidth + 'px';
-        $scene[0].style.height = window.innerHeight + 'px';
+        if($scene[0].style.width < 400) {
+          $scene[0].style.width = window.innerWidth + 'px';
+          $scene[0].style.height = window.innerHeight + 'px';
+        }
         // if (!$prompt.hasClass('hide')) {
         //   if (window.innerWidth < 600) {
         //     $toggle.addClass('hide');

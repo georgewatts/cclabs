@@ -170,7 +170,7 @@ margin: 0;
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-  <img id="goggles" src="vr_goggles.png" />
+  <!-- <img id="goggles" src="vr_goggles.png" /> -->
   <div class="container">
     <div id="scene">
       <!-- <div class="layer" data-depth="0.00"><img src="stars.png"></div>
@@ -308,10 +308,11 @@ jQuery(window).load(function () {
         elem.parentNode.removeChild(elem);
       }});
 
-  tl.from(goggles, 2, {top:"-50%", ease:Back.easeOut})
-    .to(goggles, 5, {width:"1000%", alpha:0}, 3.0)
-    .from(layers, 3.0, {alpha:0}, 4.0)
-    .from(title, 3.0, {alpha:0}, 4.0);
+  // tl.from(goggles, 2, {top:"-50%", ease:Back.easeOut})
+  //   .to(goggles, 5, {width:"1000%", alpha:0}, 3.0)
+  //   .from(layers, 3.0, {alpha:0}, 4.0)
+  //   .from(title, 3.0, {alpha:0}, 4.0);
+
   // .to(img, 0.1, {width:"0%"});
   // .staggerFrom(img, 0.5, {top:"-=30px", rotation:"-40deg", alpha:0, scale:1.8, ease:Back.easeOut}, 0.2);
 

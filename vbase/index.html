@@ -281,7 +281,7 @@ jQuery(window).load(function () {
       // TweenLite.from(goggles, 3, {top:"-50%", ease:Back.easeOut});
       // Resize handler.
       (resize = function() {
-        if($scene[0].style.width < 400) {
+        if(window.innerWidth > 400) {
           $scene[0].style.width = window.innerWidth + 'px';
           $scene[0].style.height = window.innerHeight + 'px';
         }

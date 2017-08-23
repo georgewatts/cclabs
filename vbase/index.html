@@ -271,7 +271,8 @@ jQuery(window).load(function () {
   var goggles = $("#goggles"),
       layers = $(".layer"),
       title = $(".title"),
-      $scene = $('#scene');
+      $scene = $('#scene'),
+      $html = $('html');
       // tl = new TimelineLite();
 
   // function getStaggerAnimation() {
@@ -279,7 +280,25 @@ jQuery(window).load(function () {
     // TweenLite.to(goggles, 2.5, {top:-6000, left:"500px", ease:Back.easeOut});
 
       // TweenLite.from(goggles, 3, {top:"-50%", ease:Back.easeOut});
-      // Resize handler.
+
+      // Hide browser menu.
+(function() {
+  setTimeout(function(){window.scrollTo(0,0);},0);
+})();
+
+// Setup FastClick.
+FastClick.attach(document.body);
+
+// Add touch functionality.
+if (Hammer.HAS_TOUCHEVENTS) {
+  $container.hammer({drag_lock_to_axis: true});
+  _.tap($html, 'a,button,[data-tap]');
+}
+
+// Add touch or mouse class to html element.
+$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+// Resize handler.
       (resize = function() {
         if(window.innerWidth > 400) {
           $scene[0].style.width = window.innerWidth + 'px';

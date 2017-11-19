@@ -1,5 +1,37 @@
-<html>
-<body>
-<h1>Test 1</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header" class="masthead">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto my-auto">
+                
+                <h1 class="brand-heading">CREATIVE CODE LABS</h1>
+                <h1 class="intro-text">Coming Soon</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+    <script>
+        var pattern = Trianglify({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            x_colors: 'Blues',
+            y_colors: 'Blues',
+        });
+        document.getElementById('header').appendChild(pattern.canvas())
+    </script>
 </html>
